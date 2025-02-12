@@ -1,12 +1,24 @@
 package main
 
 import (
-	"encoding/json"
 	"fmt"
+	"myFirstGoProject/pacote"
 )
 
 func main() {
 	fmt.Println("Hello world")
-
-	json.Marshal()
+	fmt.Println(pacote.Bar)
 }
+
+//Nomes Publicos ou Privados
+
+//letra minúscula privado
+//letra Maiúscula pública
+
+//Nomes
+
+var Foo string
+
+const Bar string = "bar"
+
+type MeuTipo struct{}
