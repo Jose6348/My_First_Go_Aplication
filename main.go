@@ -1,44 +1,29 @@
 package main
 
-import (
-	"time"
-)
+import "fmt"
 
 func main() {
-	// switch x := math.Sqrt(4); x {
-	// case 2:
-	// 	fmt.Println("resultado é 2")
-	// default:
-	// 	fmt.Println("Deu erro")
-	// }
-
+	doDefer()
 }
 
-func isWeekend(x time.Time) bool {
-	switch x.Weekday() {
-	case time.Sunday, time.Saturday:
-		return true
-	default:
-		return false
-	}
+func doDefer() {
+	x := 10
+	defer func(y int) {
+		fmt.Println(y)
+	}(x)
+
+	x = 50
+	fmt.Println(x)
 }
 
-// func isWeekend(x time.Time) bool {
-// 	switch {
-// 	case x.Weekday() > 0 && x.Weekday() < 6:
-// 		return false
-// 	default:
-// 		return true
-// 	}
-
-// switch {
-// case x == 1:
+// func doDefer() {
+// 	defer fmt.Println(3)
+// 	defer fmt.Println(2)
 // 	fmt.Println(1)
-// 	fallthrough
-// case "äbc" == "foo":
-// 	fmt.Println(2)
-// default:
-// 	fmt.Println("Outra coisa")
 // }
 
+// func doDefer() int {
+// 	defer fmt.Println("World")
+// 	fmt.Println("Hello")
+// 	return 10
 // }
