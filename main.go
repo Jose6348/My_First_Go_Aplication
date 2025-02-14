@@ -1,14 +1,16 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"math"
+)
 
 func main() {
-	for range 10 {
-		fmt.Println("dentro")
+	if x := math.Sqrt(4); x < 1 {
+		fmt.Println(x)
+	} else if x < 1 {
+		fmt.Println("Maior que zero")
+	} else {
+		fmt.Print("caiu aqui")
 	}
-
-	// arr := [10]int{1, 2, 3, 4, 5, 6, 7, 8, 9, 10}
-	// for _, elem := range arr {
-	// 	fmt.Println(elem)
-	// }
 }
